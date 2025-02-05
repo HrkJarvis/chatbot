@@ -21,6 +21,7 @@ import {
 import Link from 'next/link';
 import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
+
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -77,34 +78,19 @@ export default function LoginPage() {
                     backgroundColor: 'background.paper'
                 }}
             >
-                {/* Ticket Assistant Heading */}
-                <Typography 
-                    component="h2" 
-                    variant="h6" 
-                    sx={{ 
-                        mb: 2, 
-                        fontWeight: 600,
-                        background: 'linear-gradient(45deg, primary.main, secondary.main)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                    }}
-                >
-                    Ticket Assistant
-                </Typography>
-
-                {/* Login Heading */}
                 <Typography 
                     component="h1" 
                     variant="h5" 
+                    
                     sx={{ 
                         mb: 3, 
                         fontWeight: 600,
-                        background: 'linear-gradient(45deg, primary.main, secondary.main)',
+                        background: 'linear-gradient(45deg, #4caf50, #81c784)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}
                 >
-                    Login to ChatBot
+                    Login to ChatBot-Ticket Assistant
                 </Typography>
 
                 <Box component="form" onSubmit={handleSubmit} sx={{ width: '100%', mt: 1 }}>
