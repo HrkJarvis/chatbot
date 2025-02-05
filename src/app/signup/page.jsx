@@ -104,7 +104,7 @@ export default function SignupPage() {
                     sx={{ 
                         mb: 3, 
                         fontWeight: 600,
-                        background: 'linear-gradient(45deg, primary.main, secondary.main)',
+                        background: 'linear-gradient(45deg, #4caf50, #81c784)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}
