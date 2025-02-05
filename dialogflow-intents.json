@@ -1,0 +1,170 @@
+{
+  "intents": [
+    {
+      "name": "booking.start",
+      "trainingPhrases": [
+        "I want to book tickets",
+        "Need tickets for a show",
+        "Help me book something",
+        "Looking for tickets",
+        "Want to make a booking"
+      ],
+      "responses": [
+        "What would you like to book? I can help you with movies, events, or travel tickets."
+      ]
+    },
+    {
+      "name": "booking.movie",
+      "trainingPhrases": [
+        "I want to watch a movie",
+        "Show me movie tickets",
+        "Book movie tickets",
+        "Cinema tickets please",
+        "Movie booking"
+      ],
+      "parameters": [
+        {
+          "name": "movie",
+          "entityType": "@movie",
+          "required": false
+        },
+        {
+          "name": "date",
+          "entityType": "@sys.date",
+          "required": false
+        },
+        {
+          "name": "time",
+          "entityType": "@sys.time",
+          "required": false
+        },
+        {
+          "name": "tickets",
+          "entityType": "@sys.number",
+          "required": false
+        }
+      ],
+      "responses": [
+        "Here are the available movies: $movies",
+        "For $movie, here are the available showtimes on $date: $times",
+        "Great! I'll book $tickets tickets for $movie on $date at $time"
+      ]
+    },
+    {
+      "name": "booking.event",
+      "trainingPhrases": [
+        "I want to go to an event",
+        "Show me events",
+        "Book event tickets",
+        "What events are happening",
+        "Event booking"
+      ],
+      "parameters": [
+        {
+          "name": "event",
+          "entityType": "@event",
+          "required": false
+        },
+        {
+          "name": "date",
+          "entityType": "@sys.date",
+          "required": false
+        },
+        {
+          "name": "tickets",
+          "entityType": "@sys.number",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "booking.travel",
+      "trainingPhrases": [
+        "I need travel tickets",
+        "Book travel tickets",
+        "Travel booking",
+        "Help me book travel",
+        "Want to travel to"
+      ],
+      "parameters": [
+        {
+          "name": "destination",
+          "entityType": "@destination",
+          "required": false
+        },
+        {
+          "name": "date",
+          "entityType": "@sys.date",
+          "required": false
+        },
+        {
+          "name": "tickets",
+          "entityType": "@sys.number",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "booking.confirm",
+      "trainingPhrases": [
+        "Yes, book it",
+        "Confirm booking",
+        "That's correct",
+        "Proceed with booking",
+        "Book now"
+      ],
+      "responses": [
+        "Great! Your booking is confirmed. Here's your confirmation number: $booking_id"
+      ]
+    },
+    {
+      "name": "booking.cancel",
+      "trainingPhrases": [
+        "Cancel booking",
+        "I want to cancel",
+        "Stop the booking",
+        "Don't book",
+        "Never mind"
+      ],
+      "responses": [
+        "I've cancelled the booking process. Is there anything else I can help you with?"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "movie",
+      "values": [
+        {
+          "value": "The Matrix Resurrections",
+          "synonyms": ["Matrix", "Matrix 4", "The Matrix 4"]
+        },
+        {
+          "value": "Dune",
+          "synonyms": ["Dune movie"]
+        },
+        {
+          "value": "Inception",
+          "synonyms": ["Inception movie"]
+        }
+      ]
+    },
+    {
+      "name": "event",
+      "values": [
+        {
+          "value": "Rock Concert",
+          "synonyms": ["concert", "rock show", "music show"]
+        },
+        {
+          "value": "Comedy Show",
+          "synonyms": ["comedy", "standup", "stand up comedy"]
+        },
+        {
+          "value": "Tech Conference",
+          "synonyms": ["conference", "tech event", "technology conference"]
+        }
+      ]
+    }
+  ]
+}
