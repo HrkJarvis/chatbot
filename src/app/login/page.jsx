@@ -1,27 +1,3 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-    Box, 
-    Button, 
-    Container, 
-    TextField, 
-    Typography, 
-    Paper,
-    Link as MUILink,
-    InputAdornment,
-    IconButton
-} from '@mui/material';
-import { 
-    Email as EmailIcon, 
-    Lock as LockIcon, 
-    Visibility, 
-    VisibilityOff 
-} from '@mui/icons-material';
-import Link from 'next/link';
-import { useAuth } from '../../context/AuthContext';
-import { useRouter } from 'next/navigation';
-
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -78,6 +54,22 @@ export default function LoginPage() {
                     backgroundColor: 'background.paper'
                 }}
             >
+                {/* Ticket Assistant Heading */}
+                <Typography 
+                    component="h2" 
+                    variant="h6" 
+                    sx={{ 
+                        mb: 2, 
+                        fontWeight: 600,
+                        background: 'linear-gradient(45deg, primary.main, secondary.main)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                    }}
+                >
+                    Ticket Assistant
+                </Typography>
+
+                {/* Login Heading */}
                 <Typography 
                     component="h1" 
                     variant="h5" 
