@@ -1,3 +1,26 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+    Box, 
+    Button, 
+    Container, 
+    TextField, 
+    Typography, 
+    Paper,
+    Link as MUILink,
+    InputAdornment,
+    IconButton
+} from '@mui/material';
+import { 
+    Email as EmailIcon, 
+    Lock as LockIcon, 
+    Visibility, 
+    VisibilityOff 
+} from '@mui/icons-material';
+import Link from 'next/link';
+import { useAuth } from '../../context/AuthContext';
+import { useRouter } from 'next/navigation';
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
