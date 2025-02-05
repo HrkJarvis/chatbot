@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
                 password: credentials.password
             };
 
-            const response = await fetch('/api/auth/login', {
+            const response = await fetch('https://beautiful-puppy-cf7264.netlify.app/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(loginData)
@@ -98,7 +98,7 @@ export const AuthProvider = ({ children }) => {
                 password: userData.password
             };
 
-            const response = await fetch('/api/auth/signup', {
+            const response = await fetch('https://beautiful-puppy-cf7264.netlify.app/api/auth/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(signupData)
@@ -138,7 +138,7 @@ export const AuthProvider = ({ children }) => {
             // Immediately reset auth state before API call
             resetAuthState();
 
-            const response = await fetch('/api/auth/logout', {
+            const response = await fetch('https://beautiful-puppy-cf7264.netlify.app/api/auth/logout', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' }
             });
